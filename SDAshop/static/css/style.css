@@ -86,11 +86,22 @@ body {
 	color: rgb(47, 201, 0);
 }
 
-#image {
+#site_title {
+    padding: 10px;
 	width: 70%;
-	height: 370px;
+	min-height: 20px;
+	height: auto;
 	display: flex;
-	justify-content: center;
+	justify-content: left;
+}
+
+#text_area {
+    padding: 10px;
+	width: 70%;
+	min-height: 350px;
+	height: auto;
+	display: flex;
+	justify-content: left;
 }
 
 
