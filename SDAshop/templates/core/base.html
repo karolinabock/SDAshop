@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +8,7 @@
 
 <title>Sklep internetowy z panelem administracyjnym</title>
 
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 
 </head>
 
@@ -31,9 +33,17 @@
                 <li><a href="#">Produkt_3</a></li>
             </ul>
         </div>
-        <div id="image">
-            <img src="images/shop.jpg"/>
+
+        <div id="site_title">
+            {% block site_title %}
+            {% endblock %}
         </div>
+
+        <div id="text_area">
+            {% block text_area %}
+            {% endblock %}
+        </div>
+
 	</div>
     <hr />
 
