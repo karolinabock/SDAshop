@@ -24,3 +24,6 @@ def kontakt(request):
 
 def co_sprzedajemy(request):
     return render(request, 'cosprzedajemy.html')
+
+def zwroty(request):
+    return render(request, 'zwroty.html')
