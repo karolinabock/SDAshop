@@ -27,10 +27,10 @@
         </div>
         <div id="header_menu">
         	<ul>
-            	<li><a href="#">Strona główna</a></li>
-                <li><a href="#">Produkt_1</a></li>
-                <li><a href="#">Produkt_2</a></li>
-                <li><a href="#">Produkt_3</a></li>
+            	<li><a href="{% url 'home' %}">Strona główna</a></li>
+                <li><a href="{% url 'produkt1' %}">Produkt_1</a></li>
+                <li><a href="{% url 'produkt2' %}">Produkt_2</a></li>
+                <li><a href="{% url 'produkt3' %}">Produkt_3</a></li>
             </ul>
         </div>
 
@@ -53,7 +53,7 @@
     		<h2>Twoje konto</h2>
             <p>
             <a href="#">Zaloguj się</a>
-            <p><a href="#">Informacje o zamówieniu</a></p>
+            <p><a href="{% url 'informacje-o-zamowieniu' %}">Informacje o zamówieniu</a></p>
            <p><a href="#">Zarejestruj się</a></p>
             </p>
     </div>
@@ -61,14 +61,14 @@
     		<h2>Informacje</h2>
             <p>
             <a href="#">Zwroty</a>
-            <p><a href="#">Reklamacje</a></p>
+            <p><a href="{% url 'reklamacje' %}">Reklamacje</a></p>
             </p>
     </div>
     <div id="boxy_box_3">
     		<h2>O Nas</h2>
             <p>
-            <a href="#">Kontakt</a>
-            <p><a href="#">Co sprzedajemy</a></p>
+            <a href="{% url 'kontakt' %}">Kontakt</a>
+            <p><a href="{% url 'co-sprzedajemy' %}">Co sprzedajemy</a></p>
             </p>
     </div>
     </div>
