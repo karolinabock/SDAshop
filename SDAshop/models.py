@@ -22,7 +22,7 @@ BODY_TYPE = (
 
 FUEL_TYPE = (
     ('diesel', 'Diesel'),
-    ('Gasoline', 'Gasoline')
+    ('gasoline', 'Gasoline')
 )
 
 

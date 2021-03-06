@@ -12,5 +12,7 @@ class CarModelAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['title']
+    list_display = ['brand_name', 'car_model', 'year_of_production', 'engine', 'new_or_used',
+                    'body_type', 'color', 'price', 'in_stock']
+    list_editable = ['price', 'in_stock']
     list_filter = ['brand_name', 'car_model']
