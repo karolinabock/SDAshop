@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Brand, CarModel, Product
 
 def home(request):
     return render(request, 'home.html')
@@ -27,3 +27,7 @@ def co_sprzedajemy(request):
 
 def zwroty(request):
     return render(request, 'zwroty.html')
+
+def all_products(request):
+    products = Product.objects.all()
+    return render(request, 'all_products.html', {'products': products})
