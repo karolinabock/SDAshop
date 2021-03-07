@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from .models import Brand, CarModel, Product
 
 def home(request):
@@ -31,3 +31,7 @@ def zwroty(request):
 def all_products(request):
     products = Product.objects.all()
     return render(request, 'all_products.html', {'products': products})
+
+def product_details(request, id):
+    product = get_object_or_404(Product, id=id, in_stock=True)
+    return render(request, 'single_product.html', {'product': product})
