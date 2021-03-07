@@ -31,4 +31,6 @@ urlpatterns = [
     path('', views.panel, name='panel'),
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('all_products/', views.all_products, name='all_products'),
+    path('single_product/<int:id>/', views.product_details, name='product_details'),
 ]
