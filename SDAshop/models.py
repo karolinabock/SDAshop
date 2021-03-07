@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 GEAR_BOX_TYPE = (
     ('manual', 'Manual'),
@@ -61,6 +62,9 @@ class Product(models.Model):
     is_active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+    def get_absolute_url(self):
+        return reverse('product_details', args=[self.id])
 
     def __str__(self):
         return self.title
