@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Sklep internetowy z panelem administracyjnym</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+ 
+</head>
+
+<body>
+
+	<div id="container">
+
+        <div id="Sklep">
+            <a href="index.html"></a><img src="images/super_logo.png " style="width:30%"></a>
+        <div id="login_1">
+            <ul>
+                <li><a href="#">ZALOGUJ SIĘ</a></li>
+            </ul>  
+        <div id="login_2">
+            <ul>
+                <li><a href="rejestracja.html">ZAREJESTRUJ SIĘ</a></li>
+            </ul>
+        </div>
+        </div>
+        <div id="header_menu">
+        	<ul>
+            	<li><a href="index.html">Strona główna</a></li>
+                <li><a href="index2.html">Wyszukiwarka</a></li>
+                <li><a href="index3.html">Kontakt</a></li>
+            </ul>
+        </div>
+
+        
+
+
+ <!-- Slideshow -->
+ <div class="slideshow">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <img src="images/baner1a.jpg" style="width:100%">
+
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="images/baner2a.jpg" style="width:100%">
+
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="images/baner3.jpg" style="width:100%">
+
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div> 
+
+
+  <p>JAKIEGO SAMOCHODU SZUKASZ?</p>
+  <p>
+  <label for="filtr">Marka:</label>
+  <select id="filtr">
+    <option value="Wybierz">Wybierz...</option>
+    <option value="Audi">Audi</option>
+    <option value="Fiat">Fiat</option>
+    <option value="Ford">Ford</option>
+  </select>
+</p>
+
+<p>
+  <label for="filtr">Model:</label>
+  <select id="filtr">
+    <option value="Wybierz">Wybierz...</option>
+    <option value="A3">A3</option>
+    <option value="Tipo">Tipo</option>
+    <option value="Puma">Puma</option>
+  </select>
+</p>
+
+<a href="#table"><img src="images/wyszukaj.jpg" style="width:10%"></a>
+
+
+<p>
+    <div id="table">
+    <table border="2">
+      <thead>
+         <tr> <th> ZDJĘCIE SAMOCHODU <th>SPECYFIKACJA <th> KUP
+      <tbody>
+         <tr> <th> <img src="images/car.jpg" width="100%">  <td width="500px"> Marka, model, przebieg, silnik itp. <td width="180px"> <a href="zakup.html"><img src="images/button.png" style="width:60%"></a>
+         <tr> <th> <img src="images/car.jpg" width="100%">  <td width="500px"> Alfa Romeo, model, przebieg, silnik itp. <td width="180px"> <a href="zakup.html"><img src="images/button.png" style="width:60%"></a>
+         <tr> <th> <img src="images/car.jpg" width="100%">  <td width="500px"> Fiat, model, przebieg, silnik itp. <td width="180px"> <a href="zakup.html"><img src="images/button.png" style="width:60%"></a>
+         <tr> <th> <a href="wizualizacja.html"><img src="images/car.jpg" width="100%"> </a> <td width="500px"> Ford, model, przebieg, silnik itp. <td width="180px"> <a href="zakup.html"><img src="images/button.png" style="width:60%"></a>
+   </table>
+    </div>
+  </p>
+
+    <div id="footer">
+        <p>
+        <a href="https://sdacademy.pl/" > Software Development Academy</a>
+        </p>
+        
+    </div>
+    <button onclick="myFunction()">Toggle dark mode</button>
+
+    <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+    
+    </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
