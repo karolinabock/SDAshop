@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +8,7 @@
 <title>Sklep internetowy z panelem administracyjnym</title>
 
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-
+ 
 </head>
 
 <body>
@@ -17,64 +16,86 @@
 	<div id="container">
 
         <div id="Sklep">
-        	<a>Sklep internetowy</a>
-        </div>
-        <div id="login">
-            Użytkownik: {{ user.username }}
+            <a href="{% url 'home' %}"></a><img src="{% static 'images/super_logo.png'%}" style="width:30%"></a>
+        <div id="login_1">
             <ul>
-            <li><a href="{% url 'signup' %}">ZAREJESTRUJ SIĘ</a></li>
-            <li><a href="{% url 'login' %}">ZALOGUJ SIĘ</a></li>
-            <li><a href="{% url 'logout' %}">WYLOGUJ SIĘ</a></li>
-            <li><a href="{% url 'settings' %}">USTAWIENIA</a></li>
+                <li><a href="{% url 'login' %}">ZALOGUJ SIĘ</a></li>
             </ul>
+        <div id="login_2">
+            <ul>
+                <li><a href="{% url 'signup' %}">ZAREJESTRUJ SIĘ</a></li>
+                <li><a href="{% url 'logout' %}">WYLOGUJ SIĘ</a></li>
+                <li><a href="{% url 'settings' %}">USTAWIENIA</a></li>
+            </ul>
+
+        </div>
         </div>
         <div id="header_menu">
         	<ul>
             	<li><a href="{% url 'home' %}">Strona główna</a></li>
-                <li><a href="{% url 'produkt1' %}">Produkt_1</a></li>
-                <li><a href="{% url 'produkt2' %}">Produkt_2</a></li>
-                <li><a href="{% url 'produkt3' %}">Produkt_3</a></li>
+                <li><a href="{% url 'all_products' %}">Wyszukiwarka</a></li>
+                <li><a href="{% url 'add' %}">Dodaj swój samochód</a></li>
+                <li><a href="{% url 'contact' %}">Kontakt</a></li>
             </ul>
         </div>
 
-        <div id="site_title">
-            {% block site_title %}
-            {% endblock %}
-        </div>
+    </div>
+         <!-- Slideshow -->
+ <div class="slideshow">
 
-        <div id="text_area">
-            {% block text_area %}
-            {% endblock %}
-        </div>
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <img src="{% static 'images/baner1a.jpg' %}" style="width:100%">
 
-	</div>
-    <hr />
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="{% static 'images/baner2a.jpg' %}" style="width:100%">
+
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="{% static 'images/baner3.jpg' %}" style="width:100%">
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+<br>
+<br>
+<hr>
+
+{% block site_title %}
+
+{% endblock %}
+
+{% block text_area %}
+
+{% endblock %}
+
+<hr>
 
 
-    <div id="boxy">
-    <div id="boxy_box_1">
-    		<h2>Twoje konto</h2>
-            <p>
-            <a href="#">Zaloguj się</a>
-            <p><a href="{% url 'informacje-o-zamowieniu' %}">Informacje o zamówieniu</a></p>
-           <p><a href="#">Zarejestruj się</a></p>
-            </p>
+    <div id="footer">
+        <p>
+        <a href="https://sdacademy.pl/" > Software Development Academy</a>
+        </p>
+        
     </div>
-    <div id="boxy_box_2">
-    		<h2>Informacje</h2>
-            <p>
-            <a href="{% url 'zwroty' %}">Zwroty</a>
-            <p><a href="{% url 'reklamacje' %}">Reklamacje</a></p>
-            </p>
-    </div>
-    <div id="boxy_box_3">
-    		<h2>O Nas</h2>
-            <p>
-            <a href="{% url 'kontakt' %}">Kontakt</a>
-            <p><a href="{% url 'co-sprzedajemy' %}">Co sprzedajemy</a></p>
-            </p>
+    <button onclick="myFunction()">Toggle dark mode</button>
+
+    <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+    
     </div>
     </div>
-    </div>
+    <script src="{% static 'js/index.js' %}"></script>
 </body>
 </html>
+
