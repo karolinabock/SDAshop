@@ -12,32 +12,33 @@
 </head>
 
 <body>
-
-	<div id="container">
+<div id="container">
 
         <div id="Sklep">
             <a href="{% url 'home' %}"></a><img src="{% static 'images/super_logo.png'%}" style="width:30%"></a>
         <div id="login_1">
             <ul>
+                {% if not user.is_authenticated %}
                 <li><a href="{% url 'login' %}">ZALOGUJ SIĘ</a></li>
+                <li><a href="{% url 'signup' %}">ZAREJESTRUJ SIĘ</a></li>
             </ul>
         <div id="login_2">
             <ul>
-                <li><a href="{% url 'signup' %}">ZAREJESTRUJ SIĘ</a></li>
+                {% else %}
                 <li><a href="{% url 'logout' %}">WYLOGUJ SIĘ</a></li>
                 <li><a href="{% url 'settings' %}">USTAWIENIA</a></li>
+                {% endif %}
             </ul>
-
         </div>
         </div>
         <div id="header_menu">
-        	<ul>
-            	<li><a href="{% url 'home' %}">Strona główna</a></li>
+            <ul>
+                <li><a href="{% url 'home' %}">Strona główna</a></li>
                 <li><a href="{% url 'all_products' %}">Wyszukiwarka</a></li>
                 <li><a href="{% url 'add' %}">Dodaj swój samochód</a></li>
                 <li><a href="{% url 'contact' %}">Kontakt</a></li>
             </ul>
-        </div>
+
 
     </div>
          <!-- Slideshow -->
